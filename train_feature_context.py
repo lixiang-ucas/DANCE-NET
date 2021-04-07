@@ -341,11 +341,11 @@ import cPickle as pickle
 import numpy as np
 
 train_f = open('./data/train_merge_min_norm_fea.pickle', 'rb')
-train_xyz, train_label, train_feats = pickle.load(train_f)
+train_xyz, train_label, train_feats = pickle.load(train_f, encoding='bytes')
 train_f.close()
 
 test_f = open('./data/test_merge_min_norm_fea_paper_height.pickle', 'r')
-test_xyz, test_label, test_feats = pickle.load(test_f)
+test_xyz, test_label, test_feats = pickle.load(test_f, encoding='bytes')
 test_f.close()
 
 NUM_CLASSES = 9
