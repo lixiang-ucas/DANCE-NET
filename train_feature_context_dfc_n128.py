@@ -529,7 +529,7 @@ def eval_one_epoch_whole_scene(sess, ops, test_writer):
 pointclouds_pl, labels_pl, smpws_pl = placeholder_inputs(None, None)
 feature_pl = tf.placeholder(tf.float32, shape=(None, None, 1))
 is_training_pl = tf.placeholder(tf.bool, shape=())
-ctx_pl = tf.placeholder(tf.int32, shape=(None, NUM_CLASSES))
+ctx_pl = tf.placeholder(tf.float32, shape=(None, NUM_CLASSES))
 
 # Note the global_step=batch parameter to minimize. 
 # That tells the optimizer to helpfully increment the 'batch' parameter for you every time it trains.
