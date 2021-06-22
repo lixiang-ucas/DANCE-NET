@@ -7,7 +7,7 @@ sys.path.append(os.path.join(BASE_DIR, '../utils'))
 import tensorflow as tf
 import numpy as np
 import tf_util
-from PointConv import feature_encoding_layer, feature_decoding_layer
+from DensityConv import feature_encoding_layer, feature_decoding_layer
 
 def placeholder_inputs(batch_size, num_point):
     pointclouds_pl = tf.placeholder(tf.float32, shape=(batch_size, num_point, 3))
